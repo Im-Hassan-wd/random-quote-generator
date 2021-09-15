@@ -1,14 +1,14 @@
 {
-  "trips": [
+  "quote": [
     {
-      "title": "2 Night Stay in Venice",
-      "price": "£195",
+      "author": "Bill Gates",
+      "category": "Business",
       "id": "1",
-      "loc": "europe"
+      "body": "“The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency.”"
     },
     {
-      "title": "3 Night Stay in Paris",
-      "price": "£295",
+      "author": "3 Night Stay in Paris",
+      "category": "£295",
       "id": "2",
       "loc": "europe"
     },

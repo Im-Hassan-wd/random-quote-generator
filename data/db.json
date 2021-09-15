@@ -1,29 +1,23 @@
 {
   "quote": [
     {
-      "author": "Bill Gates",
+      "author": "Bill Gate",
       "category": "Business",
       "id": "1",
       "body": "“The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency.”"
     },
     {
-      "author": "3 Night Stay in Paris",
-      "category": "£295",
+      "author": "Bill Gate",
+      "category": "Life",
       "id": "2",
-      "loc": "europe"
+      "body": "“We always overestimate the change that will occur in the next two years and underestimate the change that will occur in the next ten. Don't let yourself be lulled into inaction.”"
     },
     {
-      "title": "4 Night Stay in London",
+      "author": "4 Night Stay in London",
       "price": "£345",
       "id": "3",
       "loc": "europe"
       
-    },
-    {
-      "title": "3 Night Stay in New York",
-      "price": "£325",
-      "id": "4",
-      "loc": "america"
     }
   ]
 }

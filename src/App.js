@@ -1,9 +1,13 @@
 import "./App.css";
+import Home from "./Home";
 
 const App = () => {
   return (
     <div className="app">
-      <button>random</button>
+      <div className="content">
+        <button>random</button>
+      </div>
+      <Home />
     </div>
   );
 }

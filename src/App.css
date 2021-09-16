@@ -16,3 +16,8 @@
   border: none;
   font-size: 18px;
 }
+
+/* home */
+.home {
+  align-items: center;
+}

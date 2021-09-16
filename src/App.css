@@ -6,3 +6,10 @@
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
 }
+
+/* app component */
+.app .generate {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2%;
+}

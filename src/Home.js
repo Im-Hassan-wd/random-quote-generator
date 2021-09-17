@@ -19,7 +19,7 @@ const Home = () => {
     return (
         <div className="home">
             { isLoading && <div>Loading...</div>}
-            {quotes.filter(quote => quote.author === "Bill Gate") && <RandomQuote quotes={quotes} />}
+            {quotes && <RandomQuote quotes={quotes.filter(quote => quote.author === "Bill Gate")} />}
         </div>
     );
 }

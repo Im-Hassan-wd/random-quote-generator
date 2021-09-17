@@ -1,6 +1,12 @@
 const RandomQuote = ({quotes}) => {
     return (
-        <h1>Random</h1>
+        <div className="random-quote">
+            {quotes.map(quote =>(
+                <div className="quote-preview" key={quote.id}>
+                   <p>{ quote.body }</p>
+                </div>
+            ))}
+        </div>
     );
 }
  

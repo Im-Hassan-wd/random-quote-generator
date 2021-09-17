@@ -23,7 +23,15 @@
 }
 
 /* random quote review */
+.random-quote {
+  margin: 5% 0;
+}
+
 .quote-preview {
   max-width: 300px;
   margin: 2% auto;
+}
+
+.quote-preview p {
+  font-size: 20px;
 }

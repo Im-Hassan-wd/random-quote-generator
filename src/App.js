@@ -15,7 +15,7 @@ const App = () => {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Home quotes={quotes} error={error} isLoading={isLoading} handleClick={handleClick} />
+              <Home quotes={quotes} error={error} isLoading={isLoading}/>
             </Route>
           </Switch>
         </div>

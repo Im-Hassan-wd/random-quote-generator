@@ -8,12 +8,6 @@ const App = () => {
   const { data: quotes, isLoading, error } = useFetch("http://localhost:8000/quote");
   const random = Math.ceil(Math.random() * 3);
 
-  const handleClick = (e) => {
-    const author = e.target.children[0].textContent;
-    // setUrl(`http://localhost:8000/quote?author=${author}`);
-    // console.log(url);
-  }
-
   return (
     <Router>
       <div className="app">
@@ -21,7 +15,7 @@ const App = () => {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} handleClick={handleClick} />
+              <Home quotes={quotes} error={error} isLoading={isLoading} handleClick={handleClick} />
             </Route>
           </Switch>
         </div>

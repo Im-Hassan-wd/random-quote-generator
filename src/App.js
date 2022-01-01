@@ -48,7 +48,7 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-        <Navbar navlink = "random" />
+        <Navbar navlink = "random" generate={generate} />
         <div className="content">
           <Switch>
             <Route exact path="/">

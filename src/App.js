@@ -11,11 +11,11 @@ const App = () => {
   const [error, setError] = useState(null);
 
   const random = Math.ceil(Math.random() * 3)
-  // const generate = () => {
+  const generate = () => {
   //   const generated = quotes.filter(quote => quote.id === random)
   //   setQuotes(generated.body)
   //   console.log(generated, random)
-  // }
+  }
   // console.log(quotes)
 
   // const generate = () => {
@@ -43,7 +43,7 @@ const App = () => {
           setError(err.message);
           console.log(err.message)
       })
-  }, []);
+  }, [generate]);
 
   return (
     <Router>

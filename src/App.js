@@ -2,7 +2,7 @@ import { useState, useEffect} from 'react';
 import "./App.css";
 import Home from "./Home";
 
-const randomNumber = Math.trunc(Math.random() * 3);
+const randomNumber = Math.floor(Math.random() * 3);
 console.log(randomNumber);
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
       <div className="content">
         <button>random</button>
       </div>
-      <Home quotes={quotes} />
+      <Home quotes={quotes} isLoading={isLoading} />
     </div>
   );
 }

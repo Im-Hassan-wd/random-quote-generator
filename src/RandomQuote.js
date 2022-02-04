@@ -1,7 +1,8 @@
-const RandomQuote = ({quotes}) => {
+const RandomQuote = ({data}) => {
+    console.log(data);
     return (
         <div className="random-quote">
-            {quotes.map(quote =>(
+            {data.map(quote =>(
                 <div className="quote-preview" key={quote.id}>
                    <p className="quote-body">{ quote.body }</p>
                    <div className="quote-description"> 

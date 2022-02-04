@@ -1,30 +1,20 @@
 import { useState, useEffect} from 'react';
-import "./App.css";
 import Home from "./Home";
+import data from "./data/db.json";
+import "./App.css";
 
 const randomNumber = Math.floor(Math.random() * 3);
 console.log(randomNumber);
 
 const App = () => {
   const [quotes, setQuotes] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-      fetch("http://localhost:8000/quote")
-        .then(res => {
-          return res.json();
-      }).then(data => {
-          setQuotes(data);
-          setIsLoading(false);
-      })
-  }, []);
 
   return (
     <div className="app">
       <div className="content">
         <button>random</button>
       </div>
-      <Home quotes={quotes} isLoading={isLoading} />
+      {data && <Home data={data.quote} randomNumber={randomNumber} />}
     </div>
   );
 }

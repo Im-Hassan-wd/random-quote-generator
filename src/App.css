@@ -50,6 +50,7 @@
   margin-left: 50px;
   margin-top: 30px;
   padding: 5px;
+  cursor: pointer;
 }
 
 .quote-description h3 {

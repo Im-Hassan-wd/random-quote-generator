@@ -1,7 +1,6 @@
 import RandomQuote from './RandomQuote';
 
 const Home = ({data, randomNumber}) => {
-    console.log(data);
     
     return (
         <div className="home">

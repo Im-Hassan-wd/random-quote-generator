@@ -1,5 +1,5 @@
 const RandomQuote = ({data}) => {
-    console.log(data);
+    
     return (
         <div className="random-quote">
             {data.map(quote =>(

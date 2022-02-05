@@ -1,6 +1,7 @@
 import { useState, useEffect} from 'react';
 import RandomQuote from './RandomQuote';
 
+const randomNumber = Math.trunc(Math.random() + 1  * 3);
 
 const Home = () => {
     const [quotes, setQuotes] = useState(null);
@@ -19,7 +20,7 @@ const Home = () => {
     return (
         <div className="home">
             { isLoading && <div>Loading...</div>}
-            {quotes && <RandomQuote quotes={quotes.filter(quote => quote.author === "Bill Gate")} />}
+            {quotes && <RandomQuote quotes={quotes.filter(quote => quote.id === randomNumber)} />}
         </div>
     );
 }

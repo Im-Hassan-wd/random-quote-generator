@@ -1,23 +1,27 @@
-import Home from "./Home";
-import data from "./data/db.json";
+import { useState, useEffect} from 'react';
 import "./App.css";
-import { useState } from "react";
-
-const generateNumber = () => {
-  return Math.floor(Math.random() * 3);
-}
-const randomNumber = generateNumber();
-console.log(randomNumber)
+import Home from "./Home";
 
 const App = () => {
-  const [number, setNumber] = useState(0);
+  const [quotes, setQuotes] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+      fetch("http://localhost:8000/quote")
+        .then(res => {
+          return res.json();
+      }).then(data => {
+          setQuotes(data);
+          setIsLoading(false);
+      })
+  }, []);
 
   return (
     <div className="app">
       <div className="content">
-        <button onClick={(generateNumber)}>random</button>
+        <button>random</button>
       </div>
-      {data && <Home data={data.quote} randomNumber={randomNumber} />}
+      {quotes && <Home quotes={quotes} isLoading={isLoading} />}
     </div>
   );
 }

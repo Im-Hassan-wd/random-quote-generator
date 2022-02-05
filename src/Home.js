@@ -1,11 +1,12 @@
 import RandomQuote from './RandomQuote';
 
-const Home = ({data, randomNumber}) => {
+const Home = ({quotes, isLoading, randomNumber}) => {
     
+
     return (
         <div className="home">
-            {/* { isLoading && <div>Loading...</div>} */}
-            <RandomQuote data={data.filter(quote => quote.id === randomNumber)} />
+            { isLoading && <div>Loading...</div>}
+            {quotes && <RandomQuote quotes={quotes.filter(quote => quote.id === randomNumber)} />}
         </div>
     );
 }

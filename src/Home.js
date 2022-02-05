@@ -1,7 +1,7 @@
 import { useState, useEffect} from 'react';
 import RandomQuote from './RandomQuote';
 
-const randomNumber = Math.trunc(Math.random() + 1  * 3);
+const randomNumber = Math.trunc(Math.random() * 3);
 
 const Home = () => {
     const [quotes, setQuotes] = useState(null);

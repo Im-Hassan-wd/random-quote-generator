@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const RandomQuote = ({data}) => {
     
     return (
@@ -5,10 +7,10 @@ const RandomQuote = ({data}) => {
             {data.map(quote =>(
                 <div className="quote-preview" key={quote.id}>
                    <p className="quote-body">{ quote.body }</p>
-                   <div className="quote-description"> 
+                   <a to="" className="quote-description"> 
                         <h3>{ quote.author }</h3>
                         <p>{ quote.category}</p>
-                   </div>
+                   </a>
                 </div>
             ))}
         </div>

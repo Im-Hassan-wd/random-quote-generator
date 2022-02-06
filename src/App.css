@@ -28,18 +28,15 @@
 }
 
 .quote-preview {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  margin: 10% auto;
+  max-width: 300px;
 }
 
-.quote-preview p {
+.quote-preview p.quote-body {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   text-align: left;
-  max-width: 300px;
   padding-left: 50px;
   border-left: 3px solid #f7df94;
 }

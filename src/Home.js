@@ -1,7 +1,7 @@
 import RandomQuote from './RandomQuote';
 
 const Home = ({quotes, isLoading, randomNumber}) => {
-    console.log(quotes, randomNumber);
+    
     return (
         <div className="home">
             { isLoading && <div className='loading'>Loading...</div>}

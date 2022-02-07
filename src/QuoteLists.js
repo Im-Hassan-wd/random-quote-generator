@@ -3,13 +3,13 @@ import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 
 const QuoteLists = () => {
-    const { author } = useParams();
+    const { id } = useParams();
     const [quotes, setQuotes] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-      fetch("http://localhost:8000/quote/" + author)
+      fetch("http://localhost:8000/quote/" + id)
         .then(res => {
           if(!res.ok) {
             throw Error("Could not fecth the data");

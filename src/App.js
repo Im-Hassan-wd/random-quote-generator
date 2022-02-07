@@ -21,7 +21,7 @@ const App = () => {
           setQuotes(data);
           setIsLoading(false);
       }).catch(err => {
-
+          setError(err.message);
       })
   }, []);
 
@@ -30,7 +30,7 @@ const App = () => {
       <div className="content">
         <Navbar navlink = "random" />
       </div>
-      {quotes && <Home quotes={quotes} isLoading={isLoading} randomNumber={randomNumber} />}
+      {quotes && <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={randomNumber} />}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect} from 'react';
 import "./App.css";
 import Home from "./Home";
+import Navbar from './Navbar';
 
 const App = () => {
   const [quotes, setQuotes] = useState(null);
@@ -20,7 +21,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="content">
-        <button>random</button>
+        <Navbar />
       </div>
       {isLoading && <div>Loading...</div>}
       {quotes && <Home quotes={quotes} isLoading={isLoading} randomNumber={randomNumber} />}

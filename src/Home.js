@@ -1,10 +1,10 @@
 import RandomQuote from './RandomQuote';
 
 const Home = ({quotes, isLoading, randomNumber}) => {
-    console.log(quotes);
+    console.log(quotes, randomNumber);
     return (
         <div className="home">
-            { isLoading && <div>Loading...</div>}
+            { isLoading && <div className='loading'>Loading...</div>}
             {quotes && <RandomQuote quotes={quotes.filter(quote => quote.id === randomNumber)} />}
         </div>
     );

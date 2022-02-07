@@ -5,6 +5,7 @@ import Home from "./Home";
 const App = () => {
   const [quotes, setQuotes] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const randomNumber = Math.ceil(Math.random() * 3);
 
   useEffect(() => {
       fetch("http://localhost:8000/quote")
@@ -21,7 +22,8 @@ const App = () => {
       <div className="content">
         <button>random</button>
       </div>
-      {quotes && <Home quotes={quotes} isLoading={isLoading} />}
+      {isLoading && <div>Loading...</div>}
+      {quotes && <Home quotes={quotes} isLoading={isLoading} randomNumber={randomNumber} />}
     </div>
   );
 }

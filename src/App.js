@@ -20,7 +20,9 @@ const App = () => {
       }).then(data => {
           setQuotes(data);
           setIsLoading(false);
+          setError(null);
       }).catch(err => {
+          setIsLoading(false);
           setError(err.message);
       })
   }, []);

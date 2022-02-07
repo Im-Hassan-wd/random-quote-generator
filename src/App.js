@@ -6,15 +6,22 @@ import Navbar from './Navbar';
 const App = () => {
   const [quotes, setQuotes] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
+
   const randomNumber = Math.ceil(Math.random() * 3);
 
   useEffect(() => {
       fetch("http://localhost:8000/quote")
         .then(res => {
+          if(res.ok) {
+            throw Error("Could not fecth the data")
+          }
           return res.json();
       }).then(data => {
           setQuotes(data);
           setIsLoading(false);
+      }).catch(err => {
+
       })
   }, []);
 
@@ -23,7 +30,6 @@ const App = () => {
       <div className="content">
         <Navbar navlink = "random" />
       </div>
-      {isLoading && <div>Loading...</div>}
       {quotes && <Home quotes={quotes} isLoading={isLoading} randomNumber={randomNumber} />}
     </div>
   );

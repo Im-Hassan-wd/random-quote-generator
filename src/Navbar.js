@@ -1,7 +1,7 @@
-const Navbar = () => {
+const Navbar = ({ navlink}) => {
     return (
         <div className="navbar">
-            <button>random</button>
+            <button>{ navlink }</button>
         </div>
     );
 }

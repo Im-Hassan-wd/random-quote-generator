@@ -1,4 +1,5 @@
 const RandomQuote = ({quotes}) => {
+    
     return (
         <div className="random-quote">
             {quotes.map(quote =>(

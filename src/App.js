@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="content">
-        <Navbar />
+        <Navbar navlink = "random" />
       </div>
       {isLoading && <div>Loading...</div>}
       {quotes && <Home quotes={quotes} isLoading={isLoading} randomNumber={randomNumber} />}

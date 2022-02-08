@@ -30,12 +30,18 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app">
-      <div className="content">
+    <Router>
+      <div className="app">
         <Navbar navlink = "random" />
+        <div className="content">
+          <Switch>
+            <Route path="/">
+              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={randomNumber} />
+            </Route>
+          </Switch>
+        </div>
       </div>
-      <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={randomNumber} />
-    </div>
+    </Router>
   );
 }
  

@@ -10,7 +10,11 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const randomNumber = Math.ceil(Math.random() * 3);
+  const generate = () => {
+    return Math.ceil(Math.random() * 3);
+  }
+
+  const randomNumber = generate();
 
   useEffect(() => {
       fetch("http://localhost:8000/quote")

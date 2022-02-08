@@ -1,7 +1,8 @@
-import { useState, useEffect} from 'react';
 import "./App.css";
 import Home from "./Home";
 import Navbar from './Navbar';
+import { useState, useEffect} from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
   const [quotes, setQuotes] = useState(null);

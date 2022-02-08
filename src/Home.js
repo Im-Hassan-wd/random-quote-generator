@@ -4,7 +4,7 @@ const Home = ({quotes, isLoading, randomNumber, error}) => {
     
     return (
         <div className="home">
-            { isLoading && <div className='loading'>Loading...</div>}
+            { isLoading && <div>Loading...</div>}
             { error && <div>{ error }</div>}
             {quotes && <RandomQuote quotes={quotes.filter(quote => quote.id === randomNumber)} />}
         </div>

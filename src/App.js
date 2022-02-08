@@ -3,6 +3,7 @@ import Home from "./Home";
 import Navbar from './Navbar';
 import { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import QuoteLists from "./QuoteLists";
 
 const App = () => {
   const [quotes, setQuotes] = useState(null);
@@ -37,6 +38,9 @@ const App = () => {
           <Switch>
             <Route path="/">
               <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={randomNumber} />
+            </Route>
+            <Route path="/quotelists">
+              <QuoteLists />
             </Route>
           </Switch>
         </div>

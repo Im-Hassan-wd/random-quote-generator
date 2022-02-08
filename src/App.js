@@ -36,7 +36,7 @@ const App = () => {
         <Navbar navlink = "random" />
         <div className="content">
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={randomNumber} />
             </Route>
             <Route path="/quotelists">

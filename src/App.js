@@ -10,11 +10,22 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const generate = () => {
-    return Math.ceil(Math.random() * 3);
-  }
+  const random = Math.ceil(Math.random() * 3)
+  // const generate = () => {
+  //   const generated = quotes.filter(quote => quote.id === random)
+  //   setQuotes(generated.body)
+  //   console.log(generated, random)
+  // }
+  // console.log(quotes)
 
-  const randomNumber = generate();
+  // const generate = () => {
+  //   const generated = quotes.filter(quote => quote.id === randomNumber);
+  //   set
+  //   console.log(generated);
+  //   return Math.ceil(Math.random() * 3);
+  // }
+  // const randomNumber = generate();
+
 
   useEffect(() => {
       fetch("http://localhost:8000/quote")
@@ -41,7 +52,7 @@ const App = () => {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={randomNumber} />
+              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} />
             </Route>
             <Route path="/quotelists">
               <QuoteLists />

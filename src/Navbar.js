@@ -1,4 +1,4 @@
-const Navbar = ({ navlink}) => {
+const Navbar = ({ navlink }) => {
     return (
         <div className="navbar">
             <button>{ navlink }</button>

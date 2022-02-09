@@ -43,7 +43,7 @@ const App = () => {
           setError(err.message);
           console.log(err.message)
       })
-  }, [generate]);
+  }, []);
 
   return (
     <Router>

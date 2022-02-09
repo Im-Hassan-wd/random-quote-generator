@@ -43,6 +43,7 @@
 }
 
 .quote-description {
+  text-decoration: none;
   text-align: left;
   background: #333333;
   color: #fff;

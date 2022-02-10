@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 
 const QuoteLists = () => {
-    const { name } = useParams();
+    const { author } = useParams();
 
     return (
         <div className="quote-list">
-            <h2>Quote lists - {name} </h2>
+            <h2>Quote lists - {author} </h2>
         </div>
     );
 }

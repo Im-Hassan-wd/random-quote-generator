@@ -7,10 +7,12 @@ const RandomQuote = ({quotes}) => {
             {quotes.map(quote =>(
                 <div className="quote-preview" key={quote.id}>
                    <p className="quote-body">{ quote.body }</p>
-                   <Link to={`/quotelist/${quote.author}`} className="quote-description"> 
-                        <h3>{ quote.author }</h3>
-                        <p>{ quote.category}</p>
-                   </Link>
+                   <div className="quote-description"> 
+                        <Link to={`/quotelists/${quote.id}`}>
+                            <h3>{ quote.author }</h3>
+                            <p>{ quote.category}</p>
+                        </Link>
+                   </div>
                 </div>
             ))}
         </div>

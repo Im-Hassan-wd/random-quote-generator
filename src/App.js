@@ -39,7 +39,7 @@ const App = () => {
             <Route exact path="/">
               <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} />
             </Route>
-            <Route path="/quotelists">
+            <Route path="/quotelists/:name">
               <QuoteLists />
             </Route>
           </Switch>

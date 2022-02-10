@@ -1,7 +1,7 @@
 const Navbar = ({ navlink, generate }) => {
     return (
         <div className="navbar">
-            <button onClick={generate}>{ navlink }</button>
+            <button>{ navlink }</button>
         </div>
     );
 }

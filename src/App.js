@@ -11,13 +11,7 @@ const App = () => {
   const [error, setError] = useState(null);
 
   const random = Math.ceil(Math.random() * 3)
-  const generate = () => {
-  //   const generated = quotes.filter(quote => quote.id === random)
-  //   setQuotes(generated.body)
-  //   console.log(generated, random)
-  }
-
-
+  
   useEffect(() => {
       fetch("http://localhost:8000/quote")
         .then(res => {
@@ -34,12 +28,12 @@ const App = () => {
           setError(err.message);
           console.log(err.message)
       })
-  }, []);
+  }, [generate]);
 
   return (
     <Router>
       <div className="app">
-        <Navbar navlink = "random" generate={generate} />
+        <Navbar navlink = "random" />
         <div className="content">
           <Switch>
             <Route exact path="/">

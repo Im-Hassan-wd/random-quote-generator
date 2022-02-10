@@ -16,15 +16,6 @@ const App = () => {
   //   setQuotes(generated.body)
   //   console.log(generated, random)
   }
-  // console.log(quotes)
-
-  // const generate = () => {
-  //   const generated = quotes.filter(quote => quote.id === randomNumber);
-  //   set
-  //   console.log(generated);
-  //   return Math.ceil(Math.random() * 3);
-  // }
-  // const randomNumber = generate();
 
 
   useEffect(() => {

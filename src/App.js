@@ -33,7 +33,7 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-        <Navbar navlink = "random" />
+        <Navbar />
         <div className="content">
           <Switch>
             <Route exact path="/">

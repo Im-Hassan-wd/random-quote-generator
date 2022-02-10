@@ -1,7 +1,7 @@
 const Navbar = ({ navlink, generate }) => {
     return (
         <div className="navbar">
-            <button>{ navlink }</button>
+            <button>random</button>
         </div>
     );
 }

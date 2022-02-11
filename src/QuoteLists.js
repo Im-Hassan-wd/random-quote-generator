@@ -28,7 +28,11 @@ const QuoteLists = () => {
 
     return (
         <div className="quote-list">
-            <h2>Quote lists - { author } </h2>
+            { isLoading && <div>Loading...</div>}
+            { error && <div>{ error }</div>}
+            { quotes && (
+               <p className="quote-body">{ quote.body }</p> 
+            )}
         </div>
     );
 }

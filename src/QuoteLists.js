@@ -9,7 +9,7 @@ const QuoteLists = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-      fetch("http://localhost:8000/quote/")
+      fetch("http://localhost:8000/quote/" + author)
         .then(res => {
           if(!res.ok) {
             throw Error("Could not fecth the data");
@@ -26,12 +26,14 @@ const QuoteLists = () => {
       })
   }, []);
 
+  console.log(quotes)
+
     return (
         <div className="quote-list">
             { isLoading && <div>Loading...</div>}
             { error && <div>{ error }</div>}
             { quotes && (
-               <p className="quote-body">{ quote.body }</p> 
+               <p className="quote-body">{ quotes.body }</p> 
             )}
         </div>
     );

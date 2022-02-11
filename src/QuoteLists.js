@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 
 const QuoteLists = () => {
     const { author } = useParams();
+    const [quotes, setQuotes] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
       fetch("http://localhost:8000/quote")

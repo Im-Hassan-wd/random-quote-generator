@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import { useParams } from "react-router-dom";
 
 const QuoteLists = () => {
@@ -7,7 +9,7 @@ const QuoteLists = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-      fetch("http://localhost:8000/quote")
+      fetch("http://localhost:8000/quote/")
         .then(res => {
           if(!res.ok) {
             throw Error("Could not fecth the data");

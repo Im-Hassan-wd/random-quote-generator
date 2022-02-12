@@ -1,8 +1,4 @@
-const RandomQuote = ({quotes}) => {
-    
-    const handleClick = (e) => {
-        console.log(e.target.children[0].textContent);
-    }
+const RandomQuote = ({quotes, handleClick}) => {
 
     return (
         <div className="random-quote">

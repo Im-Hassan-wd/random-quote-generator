@@ -10,7 +10,13 @@ const App = () => {
   const [error, setError] = useState(null);
   const [url, setUrl ] = useState("http://localhost:8000/quote");
 
-  const random = Math.ceil(Math.random() * 3)
+  const random = Math.ceil(Math.random() * 3);
+
+  const handleClick = (e) => {
+    const author = e.target.children[0].textContent;
+    setUrl(`http://localhost:8000/quote?author=${author}`);
+    console.log(url);
+  }
   
   useEffect(() => {
       fetch(url)
@@ -37,7 +43,7 @@ const App = () => {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} />
+              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} handleClick={handleClick} />
             </Route>
           </Switch>
         </div>

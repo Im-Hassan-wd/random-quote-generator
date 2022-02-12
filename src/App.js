@@ -18,24 +18,6 @@ const App = () => {
     console.log(url);
   }
   
-  useEffect(() => {
-      fetch(url)
-        .then(res => {
-          if(!res.ok) {
-            throw Error("Could not fecth the data");
-          }
-          return res.json();
-      }).then(data => {
-          setQuotes(data);
-          setIsLoading(false);
-          setError(null);
-      }).catch(err => {
-          setIsLoading(false);
-          setError(err.message);
-          console.log(err.message)
-      })
-  }, [url]);
-
   return (
     <Router>
       <div className="app">

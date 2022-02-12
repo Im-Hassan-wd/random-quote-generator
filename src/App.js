@@ -17,8 +17,6 @@ const App = () => {
     setUrl(`http://localhost:8000/quote?author=${author}`);
     console.log(url);
   }
-
-  const filteredQuotes = quotes.filter(quote => quote.id === random);
   
   useEffect(() => {
       fetch(url)
@@ -45,7 +43,7 @@ const App = () => {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} handleClick={handleClick} />
+              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} handleClick={handleClick} setQuotes={setQuotes} filteredQuotes={filteredQuotes} />
             </Route>
           </Switch>
         </div>

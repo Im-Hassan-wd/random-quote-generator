@@ -1,7 +1,7 @@
 import RandomQuote from './RandomQuote';
 
-const Home = ({quotes, isLoading, error, handleClick, filteredQuotes, setQuotes}) => {
-    setQuotes(filteredQuotes);
+const Home = ({quotes, isLoading, error, handleClick}) => {
+    
     return (
         <div className="home">
             { isLoading && <div>Loading...</div>}

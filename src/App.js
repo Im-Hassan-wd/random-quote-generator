@@ -43,7 +43,7 @@ const App = () => {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} handleClick={handleClick} setQuotes={setQuotes} filteredQuotes={filteredQuotes} />
+              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} handleClick={handleClick} />
             </Route>
           </Switch>
         </div>

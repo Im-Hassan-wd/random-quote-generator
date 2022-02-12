@@ -17,6 +17,8 @@ const App = () => {
     setUrl(`http://localhost:8000/quote?author=${author}`);
     console.log(url);
   }
+
+  const filteredQuotes = quotes.filter(quote => quote.id === random);
   
   useEffect(() => {
       fetch(url)

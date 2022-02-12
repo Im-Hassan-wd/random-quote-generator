@@ -9,11 +9,12 @@ const App = () => {
   const [quotes, setQuotes] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [url, setUrl ] = useState("http://localhost:8000/quote");
 
   const random = Math.ceil(Math.random() * 3)
   
   useEffect(() => {
-      fetch("http://localhost:8000/quote")
+      fetch(url)
         .then(res => {
           if(!res.ok) {
             throw Error("Could not fecth the data");

@@ -5,11 +5,6 @@ import { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
-  const [quotes, setQuotes] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [url, setUrl ] = useState("http://localhost:8000/quote");
-
   const random = Math.ceil(Math.random() * 3);
 
   const handleClick = (e) => {
@@ -17,7 +12,7 @@ const App = () => {
     setUrl(`http://localhost:8000/quote?author=${author}`);
     console.log(url);
   }
-  
+
   return (
     <Router>
       <div className="app">

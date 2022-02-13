@@ -5,7 +5,6 @@ const useFetch = (url) => {
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [url, setUrl ] = useState("http://localhost:8000/quote");
 
     useEffect(() => {
         fetch(url)

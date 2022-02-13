@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./Home";
 import Navbar from './Navbar';
-import { useState, useEffect} from 'react';
+import useFetch from "./useFetch";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -10,8 +10,8 @@ const App = () => {
 
   const handleClick = (e) => {
     const author = e.target.children[0].textContent;
-    setUrl(`http://localhost:8000/quote?author=${author}`);
-    console.log(url);
+    // setUrl(`http://localhost:8000/quote?author=${author}`);
+    // console.log(url);
   }
 
   return (

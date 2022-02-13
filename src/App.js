@@ -3,7 +3,6 @@ import Home from "./Home";
 import Navbar from './Navbar';
 import { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import QuoteLists from "./QuoteLists";
 
 const App = () => {
   const [quotes, setQuotes] = useState(null);

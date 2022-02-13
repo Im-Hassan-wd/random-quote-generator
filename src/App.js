@@ -29,7 +29,7 @@ const App = () => {
           setError(err.message);
           console.log(err.message)
       })
-  }, []);
+  }, [url]);
 
   return (
     <Router>

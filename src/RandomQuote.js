@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const RandomQuote = ({quotes}) => {
     
     return (
@@ -8,10 +6,10 @@ const RandomQuote = ({quotes}) => {
                 <div className="quote-preview" key={quote.id}>
                    <p className="quote-body">{ quote.body }</p>
                    <div className="quote-description"> 
-                        <Link to={`/quote/${quote.id}`}>
+                        <div>
                             <h3>{ quote.author }</h3>
                             <p>{ quote.category}</p>
-                        </Link>
+                        </div>
                    </div>
                 </div>
             ))}

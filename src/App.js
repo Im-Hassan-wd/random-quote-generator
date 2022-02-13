@@ -40,9 +40,6 @@ const App = () => {
             <Route exact path="/">
               <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} />
             </Route>
-            <Route path="/quote/:id">
-              <QuoteLists />
-            </Route>
           </Switch>
         </div>
       </div>

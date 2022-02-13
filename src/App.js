@@ -5,6 +5,7 @@ import { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
+  const { data: quotes, isLoading, error } = useFetch("http://localhost:8000/quote");
   const random = Math.ceil(Math.random() * 3);
 
   const handleClick = (e) => {

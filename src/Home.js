@@ -8,7 +8,8 @@ const Home = ({quotes, isLoading, error, handleClick}) => {
         <div className="home">
             { isLoading && <div>Loading...</div>}
             { error && <div>{ error }</div>}
-            {quotes && active === "active" ? <RandomQuote handleClick={handleClick} quotes={quotes} /> : null}
+            {quotes && active === "active" ? <RandomQuote handleClick={handleClick} quotes={quotes.filter(quote => quote.id === random} /> : null}
+            {quotes && active === "" ? <RandomQuote handleClick={handleClick} quotes={quotes} /> : null}
         </div>
     );
 }

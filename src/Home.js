@@ -1,7 +1,7 @@
 import RandomQuote from './RandomQuote';
 import useFetch from "./useFetch";
 
-const Home = ({quotes, isLoading, error, random }) => {
+const Home = () => {
     const { data: quotes, isLoading, error } = useFetch("http://localhost:8000/quote");
     const random = Math.ceil(Math.random() * 3);
     

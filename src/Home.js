@@ -1,7 +1,7 @@
 import RandomQuote from './RandomQuote';
 import { useState} from "react";
 
-const Home = ({quotes, isLoading, error, handleClick}) => {
+const Home = ({ quotes, isLoading, error, handleClick, random }) => {
     const [active, setActive] = useState("active");
     
     return (

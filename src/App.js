@@ -21,7 +21,7 @@ const App = () => {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Home quotes={quotes} error={error} isLoading={isLoading} randomNumber={random} handleClick={handleClick} />
+              <Home quotes={quotes} error={error} isLoading={isLoading} random={random} handleClick={handleClick} />
             </Route>
           </Switch>
         </div>

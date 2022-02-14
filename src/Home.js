@@ -8,8 +8,9 @@ const Home = () => {
     return (
         <div className="home">
             { isLoading && <div>Loading...</div>}
-            { error && <div>{ error }</div>}
+            { error && <div>{ error }</div> }
             {quotes && <RandomQuote quotes={quotes.filter(quote => quote.id === random)} />}
+            
         </div>
     );
 }

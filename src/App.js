@@ -1,12 +1,9 @@
 import "./App.css";
 import Home from "./Home";
 import Navbar from './Navbar';
-import useFetch from "./useFetch";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
-  const { data: quotes, isLoading, error } = useFetch("http://localhost:8000/quote");
-  const random = Math.ceil(Math.random() * 3);
 
   return (
     <Router>
@@ -15,7 +12,7 @@ const App = () => {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Home quotes={quotes} error={error} isLoading={isLoading}/>
+              <Home />
             </Route>
           </Switch>
         </div>
